@@ -48,7 +48,7 @@ float time_passed;
 
 
 void settings() {
-  //fullScreen(P3D,SPAN);
+  //fullScreen(P3D,SPAN); // use this one for multiple screens
   fullScreen(P3D);
 }
 
@@ -64,7 +64,7 @@ void setup() {
 
   
   
-  pg = createGraphics(340, 340);
+  pg = createGraphics(340, 340); // pg is the name of the window that is mapped
   textureMode(NORMAL);
   vertices = new Vertx[0];
     firstpress = editMode = true;
@@ -92,12 +92,13 @@ void draw() {
    if (scene7);
   
   
-  //paint the pg image
+  //paint the pg image in the intro window
   image(pg, 10, 10,100,100); 
   fill(255);
   
-  //text("EDITMODE: ON:", width-400,10);
-  //text("TO SAVE PRESS W; TO RELOAD PRESS R", width-400,60);
+  text("EDITMODE: ON:", width-400,10);
+  text("TO SAVE PRESS W; TO RELOAD PRESS R", width-400,30);
+  text("CLICK 4 POINTS TO CREATE A POLYGON AND PRESS SPACE TO PLAY", width-400,50);
   
   
   xoff += random(-0.6,0.6);
